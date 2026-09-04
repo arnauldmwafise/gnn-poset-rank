@@ -241,11 +241,7 @@ synthetic data generator, and the shared training utilities, including a
 brute-force ground-truth check for Structural Incomparability Rate (the
 same check performed by hand before trusting the diagnostic tool on any
 real dataset in the paper) and a direct regression guard against model
-initialization silently ignoring its seed argument. A `conftest.py` at the
-repository root makes `pytest tests/` work correctly whether or not the
-package has been installed with `pip install -e .`; installing is still
-required to use the package (e.g. `import gnn_poset_rank`) anywhere
-outside the repository root, such as from a separate script or notebook.
+initialization silently ignoring its seed argument.
 
 ## Interactive Notebook
 

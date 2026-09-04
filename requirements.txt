@@ -1,0 +1,11 @@
+torch>=2.0
+networkx>=3.0
+numpy>=1.24
+pandas>=2.0
+
+# testing
+pytest>=7.0
+
+# only needed for scripts/download_data.py's HOUSE/NBA dimension search
+# and Table 3's Amazon0302 feature construction -- already covered by
+# numpy/torch above, listed here for clarity

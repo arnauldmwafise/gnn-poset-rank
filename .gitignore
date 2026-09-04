@@ -1,0 +1,27 @@
+# downloaded datasets (fetched separately, see scripts/download_data.py)
+# -- leading slash anchors this to the repo root ONLY, so it does not
+# also match posetrank/data/, which is source code, not downloaded data
+# (a real bug caught before the initial commit: the unanchored pattern
+# "data/" matches a directory of that name at ANY depth, and would have
+# silently excluded the entire dataset-loader subpackage from the repo)
+/data/*
+!/data/.gitkeep
+
+# checkpoints from multi-seed experiment runs
+checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store

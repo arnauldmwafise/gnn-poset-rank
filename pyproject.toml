@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "posetrank"
+version = "1.0.0"
+description = "Diagnostic and predictive tools for poset-aware graph neural ranking"
+requires-python = ">=3.9"
+dependencies = ["torch>=2.0", "networkx>=3.0", "numpy>=1.24"]
+
+[tool.setuptools.packages.find]
+include = ["posetrank*"]

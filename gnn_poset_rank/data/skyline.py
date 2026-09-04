@@ -1,5 +1,5 @@
 """
-posetrank.data.skyline
+gnn_poset_rank.data.skyline
 ========================
 
 Loader for the NBA and HOUSE skyline-query benchmark datasets, drawn from
@@ -29,7 +29,7 @@ import networkx as nx
 import numpy as np
 import torch
 
-from posetrank.diagnostics import compute_order_diagnostics
+from gnn_poset_rank.diagnostics import compute_order_diagnostics
 
 
 def load_skyline_csv(path: str, n_dims: int) -> np.ndarray:

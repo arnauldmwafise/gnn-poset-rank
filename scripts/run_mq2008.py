@@ -15,9 +15,9 @@ Usage
 import argparse
 import os
 
-from posetrank.data import load_letor_file
-from posetrank.diagnostics import compute_order_diagnostics
-from posetrank.experiments.mq2008_eval import run_mq2008_comparison
+from gnn_poset_rank.data import load_letor_file
+from gnn_poset_rank.diagnostics import compute_order_diagnostics
+from gnn_poset_rank.experiments.mq2008_eval import run_mq2008_comparison
 
 
 def compute_mq2008_sir(queries):

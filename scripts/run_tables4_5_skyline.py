@@ -11,8 +11,8 @@ Usage
 import argparse
 import os
 
-from posetrank.data.skyline import build_skyline_dataset, find_best_dimension_pair, load_skyline_csv
-from posetrank.experiments.skyline_eval import run_skyline_multiseed
+from gnn_poset_rank.data.skyline import build_skyline_dataset, find_best_dimension_pair, load_skyline_csv
+from gnn_poset_rank.experiments.skyline_eval import run_skyline_multiseed
 
 
 def report(name, dims, sir, dataset, seeds):

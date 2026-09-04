@@ -1,5 +1,5 @@
 """
-posetrank.models.encoders
+gnn_poset_rank.models.encoders
 ============================
 
 The directed dual-stream graph convolutional encoder shared by both

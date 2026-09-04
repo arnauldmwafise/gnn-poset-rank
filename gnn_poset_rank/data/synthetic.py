@@ -1,5 +1,5 @@
 """
-posetrank.data.synthetic
+gnn_poset_rank.data.synthetic
 ==========================
 
 Synthetic ranking/comparison dataset generator with a *genuine* partial
@@ -90,7 +90,7 @@ def generate_pareto_ranking_data(
         ``incomparable_rate``: fraction of ordered pairs with neither
             direction of dominance (a fast, exact companion to the
             sampled Structural Incomparability Rate in
-            :mod:`posetrank.diagnostics`, computed directly from
+            :mod:`gnn_poset_rank.diagnostics`, computed directly from
             ``dominates`` without needing graph reachability).
         ``n_dominant_pairs``: number of ordered pairs with ``i`` dominating ``j``.
 

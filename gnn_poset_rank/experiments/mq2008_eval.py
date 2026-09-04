@@ -1,5 +1,5 @@
 """
-posetrank.experiments.mq2008_eval
+gnn_poset_rank.experiments.mq2008_eval
 ====================================
 
 Reproduces the MQ2008 real-world cross-check (Section 5.5): a
@@ -32,13 +32,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from posetrank.models.encoders import DirectedOrderConv
+from gnn_poset_rank.models.encoders import DirectedOrderConv
 
 
 class ScoreModel(nn.Module):
     """A single-score ranking model, used only for the MQ2008 within-query-vs-naive comparison.
 
-    Distinct from :class:`~posetrank.models.TotalOrderScoreModel`: this
+    Distinct from :class:`~gnn_poset_rank.models.TotalOrderScoreModel`: this
     experiment asks a different question (does query-respecting message-
     passing structure help, versus a naive pooled graph) using a plain
     pairwise ranking objective, not the dominates/dominated/incomparable
@@ -151,7 +151,7 @@ def build_naive_cross_query_graph(queries: List[Dict], k: int = 5):
     Parameters
     ----------
     queries : list[dict]
-        Query-grouped data, as returned by :func:`posetrank.data.load_letor_file`.
+        Query-grouped data, as returned by :func:`gnn_poset_rank.data.load_letor_file`.
     k : int, default 5
         Number of nearest neighbors per document.
 
@@ -271,7 +271,7 @@ def run_mq2008_comparison(train_queries: List[Dict], test_queries: List[Dict], e
     Parameters
     ----------
     train_queries, test_queries : list[dict]
-        As returned by :func:`posetrank.data.load_letor_file`.
+        As returned by :func:`gnn_poset_rank.data.load_letor_file`.
     epochs : int, default 100
         Training epochs for both models.
 

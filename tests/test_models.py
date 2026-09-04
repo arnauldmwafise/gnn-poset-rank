@@ -1,9 +1,9 @@
-"""Tests for posetrank.models."""
+"""Tests for gnn_poset_rank.models."""
 
 import torch
 
-from posetrank.models import DirectedOrderConv, PartialOrderModel, SharedEncoder, TotalOrderScoreModel
-from posetrank.models.heads import DOMINATES, DOMINATED, INCOMPARABLE
+from gnn_poset_rank.models import DirectedOrderConv, PartialOrderModel, SharedEncoder, TotalOrderScoreModel
+from gnn_poset_rank.models.heads import DOMINATES, DOMINATED, INCOMPARABLE
 
 
 def _toy_graph(n=20, e=30, feat_dim=16, seed=0):

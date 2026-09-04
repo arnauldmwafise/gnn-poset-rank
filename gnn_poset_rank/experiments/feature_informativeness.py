@@ -1,5 +1,5 @@
 """
-posetrank.experiments.feature_informativeness
+gnn_poset_rank.experiments.feature_informativeness
 ================================================
 
 Reproduces Table 6: the controlled synthetic test of feature
@@ -10,9 +10,9 @@ Incomparability Rate approx. 50%, the moderate-SIR peak identified by
 the K-scan) and varies only the feature-noise level, which controls how
 informative the observed node features are about the true quality
 vector without affecting SIR at all (see
-:mod:`posetrank.data.synthetic`). This isolates feature informativeness
+:mod:`gnn_poset_rank.data.synthetic`). This isolates feature informativeness
 as the sole manipulated variable, in the same systematic, multi-seed
-spirit as the K-scan (:mod:`posetrank.experiments.k_scan`) isolates SIR.
+spirit as the K-scan (:mod:`gnn_poset_rank.experiments.k_scan`) isolates SIR.
 """
 
 import statistics
@@ -20,10 +20,10 @@ from typing import Dict, Sequence
 
 import torch
 
-from posetrank.data import generate_pareto_ranking_data
-from posetrank.diagnostics import compute_order_diagnostics
-from posetrank.models import PartialOrderModel, TotalOrderScoreModel
-from posetrank.training import sample_stratified_pairs, train_and_eval
+from gnn_poset_rank.data import generate_pareto_ranking_data
+from gnn_poset_rank.diagnostics import compute_order_diagnostics
+from gnn_poset_rank.models import PartialOrderModel, TotalOrderScoreModel
+from gnn_poset_rank.training import sample_stratified_pairs, train_and_eval
 
 
 def measure_feature_informativeness(data: Dict) -> float:
@@ -36,7 +36,7 @@ def measure_feature_informativeness(data: Dict) -> float:
     Parameters
     ----------
     data : dict
-        As returned by :func:`posetrank.data.generate_pareto_ranking_data`
+        As returned by :func:`gnn_poset_rank.data.generate_pareto_ranking_data`
         (must contain ``x`` and ``quality``).
 
     Returns
@@ -68,7 +68,7 @@ def run_informativeness_point(
     ----------
     sigma : float
         The feature-noise standard deviation
-        (:func:`posetrank.data.generate_pareto_ranking_data`'s
+        (:func:`gnn_poset_rank.data.generate_pareto_ranking_data`'s
         ``feature_noise`` parameter).
     seeds : sequence of int, default (0, 1, 2, 3, 4)
         Random seeds; each independently drives data generation, pair

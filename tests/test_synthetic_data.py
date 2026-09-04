@@ -1,5 +1,5 @@
 """
-Tests for posetrank.data.synthetic.
+Tests for gnn_poset_rank.data.synthetic.
 
 These tests check the mathematical properties the paper's Section 5.1
 explicitly claims and verifies before relying on them: Pareto dominance
@@ -13,8 +13,8 @@ import networkx as nx
 import pytest
 import torch
 
-from posetrank.data.synthetic import generate_pareto_ranking_data
-from posetrank.diagnostics import compute_order_diagnostics
+from gnn_poset_rank.data.synthetic import generate_pareto_ranking_data
+from gnn_poset_rank.diagnostics import compute_order_diagnostics
 
 
 class TestGeneratePartoRankingData:

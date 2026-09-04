@@ -12,10 +12,10 @@ import argparse
 import os
 import statistics
 
-from posetrank.data import load_chameleon_raw, load_citation_raw
-from posetrank.data.amazon import build_structural_features, compute_ranks, load_amazon0302_subgraph
-from posetrank.diagnostics import clean_dag
-from posetrank.experiments.real_data_eval import run_real_data_comparison
+from gnn_poset_rank.data import load_chameleon_raw, load_citation_raw
+from gnn_poset_rank.data.amazon import build_structural_features, compute_ranks, load_amazon0302_subgraph
+from gnn_poset_rank.diagnostics import clean_dag
+from gnn_poset_rank.experiments.real_data_eval import run_real_data_comparison
 
 
 def run_dataset_multiseed(name, x, cover_edges, num_nodes, seeds):

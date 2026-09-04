@@ -1,10 +1,10 @@
-"""Tests for posetrank.training."""
+"""Tests for gnn_poset_rank.training."""
 
 import torch
 
-from posetrank.data.synthetic import generate_pareto_ranking_data
-from posetrank.models import PartialOrderModel, TotalOrderScoreModel
-from posetrank.training import sample_stratified_pairs, train_and_eval
+from gnn_poset_rank.data.synthetic import generate_pareto_ranking_data
+from gnn_poset_rank.models import PartialOrderModel, TotalOrderScoreModel
+from gnn_poset_rank.training import sample_stratified_pairs, train_and_eval
 
 
 class TestSampleStratifiedPairs:

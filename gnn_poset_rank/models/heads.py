@@ -1,9 +1,9 @@
 """
-posetrank.models.heads
+gnn_poset_rank.models.heads
 ========================
 
 The two prediction heads compared throughout the paper. Both share an
-identical :class:`~posetrank.models.encoders.SharedEncoder`; they differ
+identical :class:`~gnn_poset_rank.models.encoders.SharedEncoder`; they differ
 only in how -- or whether -- they represent incomparability, isolating
 the effect of the prediction head's expressiveness from any difference
 in encoder capacity.
@@ -31,7 +31,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from posetrank.models.encoders import SharedEncoder
+from gnn_poset_rank.models.encoders import SharedEncoder
 
 #: Class index convention used by both models' ``predict_pairs`` and loss
 #: functions: 0 = "i dominates j", 1 = "j dominates i", 2 = "incomparable".

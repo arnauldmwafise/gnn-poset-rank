@@ -1,5 +1,5 @@
 """
-posetrank.data.letor
+gnn_poset_rank.data.letor
 ======================
 
 Loader for LETOR 4.0 MQ2008 (Qin and Liu, 2013), a conventional

@@ -11,7 +11,7 @@ Usage
 
 import argparse
 
-from posetrank.experiments.feature_informativeness import run_informativeness_scan
+from gnn_poset_rank.experiments.feature_informativeness import run_informativeness_scan
 
 
 def main():

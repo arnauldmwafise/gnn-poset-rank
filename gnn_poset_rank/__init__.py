@@ -1,5 +1,5 @@
 """
-posetrank: Diagnostic and predictive tools for poset-aware graph neural ranking.
+gnn_poset_rank: Diagnostic and predictive tools for poset-aware graph neural ranking.
 
 Companion software for "When Do Graph Neural Rankers Need Partial Orders?
 A Diagnostic and Predictive Framework for Poset-Aware Ranking".

@@ -1,4 +1,4 @@
-# posetrank: Diagnostic and Predictive Tools for Poset-Aware Graph Neural Ranking
+# gnn-poset-rank: Diagnostic and Predictive Tools for Poset-Aware Graph Neural Ranking
 
 Official implementation and reproduction package for **"When Do Graph Neural
 Rankers Need Partial Orders? A Diagnostic and Predictive Framework for
@@ -88,20 +88,20 @@ source .venv/bin/activate  # on Windows: .venv\Scripts\activate
 ### Installing the Package
 
 ```bash
-git clone https://github.com/[username]/posetrank.git
-cd posetrank
+git clone https://github.com/[username]/gnn-poset-rank.git
+cd gnn-poset-rank
 pip install -e .
 pip install -r requirements.txt
 ```
 
-Installing with `-e` (editable mode) makes the `posetrank` package
+Installing with `-e` (editable mode) makes the `gnn_poset_rank` package
 importable from anywhere while keeping it linked to this source tree, and
 is what the test suite and scripts assume.
 
 ### Code Structure
 
 ```
-posetrank/
+gnn_poset_rank/
 ├── diagnostics/
 │   ├── cleaning.py            # generic FAS + transitive reduction pipeline
 │   └── order_diagnostics.py   # CIR / TRR / SIR computation
@@ -144,7 +144,7 @@ python scripts/download_data.py --data-dir data
 
 Downloads Cora, CiteSeer, Chameleon, Amazon0302, and the NBA/HOUSE skyline
 benchmarks directly from verified, genuinely-directed source mirrors (see
-each loader's module docstring in `posetrank/data/` for why the specific
+each loader's module docstring in `gnn_poset_rank/data/` for why the specific
 source matters -- several popular mirrors of these datasets are silently
 symmetrized and unsuitable for this work).
 
@@ -216,7 +216,7 @@ Requires the manual MQ2008 download described above.
 Every number reported in the paper was independently re-verified against
 this refactored codebase before release, not merely carried over from
 earlier prototype scripts. This process caught one real regression worth
-noting explicitly: the skyline dataset construction (`posetrank/data/skyline.py`)
+noting explicitly: the skyline dataset construction (`gnn_poset_rank/data/skyline.py`)
 initially used NumPy's modern `Generator` API (`np.random.default_rng`)
 where the original experiment code used the legacy global-state
 `np.random.seed` / `np.random.choice` API -- these produce *different*
@@ -256,11 +256,11 @@ scripts.
 If you use this code, please cite:
 
 ```bibtex
-@misc{posetrank2026,
+@misc{gnnposetrank2026,
     title={When Do Graph Neural Rankers Need Partial Orders? A Diagnostic and Predictive Framework for Poset-Aware Ranking},
     author={[Author Name]},
     year={2026},
-    note={Code: https://github.com/[username]/posetrank}
+    note={Code: https://github.com/[username]/gnn-poset-rank}
 }
 ```
 

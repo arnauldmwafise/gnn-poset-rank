@@ -1,15 +1,15 @@
 """
-posetrank.experiments.skyline_eval
+gnn_poset_rank.experiments.skyline_eval
 =====================================
 
 Reproduces Tables 4, 4a, and 5: the real-world validation of the
 moderate-SIR peak on the NBA skyline dataset (Section 5.6), and the
 cross-domain replication check on HOUSE (Section 5.7).
 
-Both datasets use :func:`posetrank.data.find_best_dimension_pair` to
+Both datasets use :func:`gnn_poset_rank.data.find_best_dimension_pair` to
 locate a real dimension pair whose induced Pareto dominance relation
 sits near the target Structural Incomparability Rate, then
-:func:`posetrank.data.build_skyline_dataset` to construct the resulting
+:func:`gnn_poset_rank.data.build_skyline_dataset` to construct the resulting
 dataset, then the same five-seed resampling protocol used throughout
 Section 5 (data split, pair sampling, and model initialization all
 varying independently per seed).
@@ -20,9 +20,9 @@ from typing import Dict, Sequence, Tuple
 
 import torch
 
-from posetrank.data.skyline import build_skyline_dataset
-from posetrank.models import PartialOrderModel, TotalOrderScoreModel
-from posetrank.training import sample_stratified_pairs, train_and_eval
+from gnn_poset_rank.data.skyline import build_skyline_dataset
+from gnn_poset_rank.models import PartialOrderModel, TotalOrderScoreModel
+from gnn_poset_rank.training import sample_stratified_pairs, train_and_eval
 
 
 def run_skyline_multiseed(
@@ -33,7 +33,7 @@ def run_skyline_multiseed(
     Parameters
     ----------
     dataset : dict
-        As returned by :func:`posetrank.data.build_skyline_dataset`.
+        As returned by :func:`gnn_poset_rank.data.build_skyline_dataset`.
     seeds : sequence of int, default (0, 1, 2, 3, 4)
         Random seeds; each independently drives the observed-edge
         subsample, pair sampling, and model initialization.
@@ -86,16 +86,16 @@ def run_skyline_experiment(
 ) -> Dict:
     """Build a skyline dataset for a given dimension pair and run the full comparison.
 
-    Convenience wrapper combining :func:`~posetrank.data.build_skyline_dataset`
+    Convenience wrapper combining :func:`~gnn_poset_rank.data.build_skyline_dataset`
     and :func:`run_skyline_multiseed`.
 
     Parameters
     ----------
     data : numpy.ndarray
-        As returned by :func:`posetrank.data.load_skyline_csv`.
+        As returned by :func:`gnn_poset_rank.data.load_skyline_csv`.
     label_dims : tuple[int, ...]
         Column indices defining the dominance relation (typically found
-        via :func:`posetrank.data.find_best_dimension_pair`).
+        via :func:`gnn_poset_rank.data.find_best_dimension_pair`).
     n : int, default 3000
         Working sample size.
     seeds : sequence of int, default (0, 1, 2, 3, 4)

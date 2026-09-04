@@ -1,5 +1,5 @@
 """
-posetrank.data.chameleon
+gnn_poset_rank.data.chameleon
 ==========================
 
 Loader for the Chameleon Wikipedia page-page network (Rozemberczki et al.,
@@ -44,7 +44,7 @@ def load_chameleon_raw(edges_path: str, features_path: str) -> Dict:
         ``y``: ``[V]`` long tensor of class indices (0-4, ordinal traffic bins).
         ``class_names``: list of five ``"traffic_bin_i"`` strings.
         ``raw_edges``: ``[2, E]`` long tensor of directed hyperlink edges,
-            not yet cleaned (see :func:`posetrank.diagnostics.clean_dag`).
+            not yet cleaned (see :func:`gnn_poset_rank.diagnostics.clean_dag`).
         ``num_nodes``: number of pages.
         ``skipped_edges``: number of self-loop edges dropped.
     """

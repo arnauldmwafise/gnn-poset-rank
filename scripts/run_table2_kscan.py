@@ -10,7 +10,7 @@ Usage
 
 import argparse
 
-from posetrank.experiments.k_scan import run_k_scan
+from gnn_poset_rank.experiments.k_scan import run_k_scan
 
 
 def main():

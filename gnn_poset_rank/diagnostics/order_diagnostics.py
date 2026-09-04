@@ -1,5 +1,5 @@
 """
-posetrank.diagnostics.order_diagnostics
+gnn_poset_rank.diagnostics.order_diagnostics
 =========================================
 
 The paper's core diagnostic contribution: a three-metric framework that
@@ -38,7 +38,7 @@ from typing import Dict
 import networkx as nx
 import torch
 
-from posetrank.diagnostics.cleaning import clean_dag
+from gnn_poset_rank.diagnostics.cleaning import clean_dag
 
 
 def compute_order_diagnostics(

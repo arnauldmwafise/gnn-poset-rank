@@ -1,5 +1,5 @@
 """
-posetrank.data.citation
+gnn_poset_rank.data.citation
 =========================
 
 Loader for citation networks in LINQS raw format (Cora, CiteSeer).
@@ -15,7 +15,7 @@ example, the standard PyTorch-Geometric ``Planetoid`` distribution, in
 which 100% of edges have a present reverse). This module intentionally
 targets raw, genuinely directed mirrors instead; :func:`load_citation_raw`
 does not symmetrize edges, and callers are encouraged to verify
-directedness themselves (see :func:`posetrank.diagnostics.verify_directed`
+directedness themselves (see :func:`gnn_poset_rank.diagnostics.verify_directed`
 -- or simply check the fraction of edges with a present reverse) before
 treating the result as a genuine partial order source.
 """
@@ -45,7 +45,7 @@ def load_citation_raw(content_path: str, cites_path: str) -> Dict:
         ``paper_ids``: list of original string IDs, ``paper_ids[i]`` for node ``i``.
         ``raw_edges``: ``[2, E]`` long tensor of ``(cited_idx, citing_idx)``
             pairs -- genuine citation direction, not yet cleaned (see
-            :func:`posetrank.diagnostics.clean_dag`).
+            :func:`gnn_poset_rank.diagnostics.clean_dag`).
         ``num_nodes``: number of papers.
         ``skipped_edges``: number of ``.cites`` lines dropped (dangling
             references not present in ``.content``, or self-citations).

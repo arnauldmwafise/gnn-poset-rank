@@ -1,5 +1,5 @@
 """
-posetrank.experiments.real_data_eval
+gnn_poset_rank.experiments.real_data_eval
 =======================================
 
 Reproduces Table 3: the real-data validation on four graph-structured
@@ -9,7 +9,7 @@ regime (Section 5.4).
 Ground truth: ``dominates[i, j]`` is True iff ``j`` is reachable from
 ``i`` in the transitive closure of the dataset's cleaned DAG -- the exact
 same reachability notion used to compute the Structural Incomparability
-Rate for these datasets (:mod:`posetrank.diagnostics`), keeping the
+Rate for these datasets (:mod:`gnn_poset_rank.diagnostics`), keeping the
 definition of "dominates" and "incomparable" fully consistent between the
 Table 1 audit and this modeling comparison.
 
@@ -32,8 +32,8 @@ from typing import Dict, Tuple
 import networkx as nx
 import torch
 
-from posetrank.models import PartialOrderModel, TotalOrderScoreModel
-from posetrank.training import train_and_eval
+from gnn_poset_rank.models import PartialOrderModel, TotalOrderScoreModel
+from gnn_poset_rank.training import train_and_eval
 
 
 def split_cover_edges(cover_edges: torch.Tensor, test_frac: float = 0.15, seed: int = 0) -> Tuple[torch.Tensor, torch.Tensor]:
@@ -56,11 +56,11 @@ def sample_incomparable_pairs(DAG: nx.DiGraph, num_nodes: int, n_samples: int, s
     """Sample genuinely incomparable pairs, checked against the full true DAG.
 
     Uses the same reachability check as
-    :func:`posetrank.diagnostics.compute_order_diagnostics`'s SIR
+    :func:`gnn_poset_rank.diagnostics.compute_order_diagnostics`'s SIR
     computation. Bounded rejection sampling (up to ``50 * n_samples``
     attempts), since sparse graphs can have very few comparable pairs and
     a naive unbounded search would be needlessly slow but is not at risk
-    of hanging (unlike :func:`posetrank.training.sample_stratified_pairs`,
+    of hanging (unlike :func:`gnn_poset_rank.training.sample_stratified_pairs`,
     which handles the symmetric near-total-order case).
 
     Returns
@@ -167,7 +167,7 @@ def run_real_data_comparison(name: str, x: torch.Tensor, cover_edges: torch.Tens
         ``[N, feature_dim]`` node features.
     cover_edges : torch.Tensor
         ``[2, E]`` long tensor, the dataset's full Hasse diagram (from
-        :func:`posetrank.diagnostics.clean_dag`).
+        :func:`gnn_poset_rank.diagnostics.clean_dag`).
     num_nodes : int
         Number of nodes ``N``.
     seed : int, default 0

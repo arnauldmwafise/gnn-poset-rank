@@ -14,9 +14,9 @@ Expects raw dataset files already downloaded into ``--data-dir`` (see
 import argparse
 import os
 
-from posetrank.data import load_chameleon_raw, load_citation_raw
-from posetrank.data.amazon import load_amazon0302_subgraph
-from posetrank.diagnostics import compute_order_diagnostics
+from gnn_poset_rank.data import load_chameleon_raw, load_citation_raw
+from gnn_poset_rank.data.amazon import load_amazon0302_subgraph
+from gnn_poset_rank.diagnostics import compute_order_diagnostics
 
 
 def main():

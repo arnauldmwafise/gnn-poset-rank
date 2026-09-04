@@ -1,5 +1,5 @@
 """
-posetrank.diagnostics.cleaning
+gnn_poset_rank.diagnostics.cleaning
 ===============================
 
 Generic pipeline for converting a raw, possibly-cyclic, possibly
@@ -7,9 +7,9 @@ transitively-redundant directed comparison graph into a validated Hasse
 diagram (cover relation).
 
 This module is deliberately domain-agnostic: it is used identically by
-every dataset loader in :mod:`posetrank.data` (citation networks, the
+every dataset loader in :mod:`gnn_poset_rank.data` (citation networks, the
 Wikipedia hyperlink network, the co-purchase network) and by the
-diagnostic framework in :mod:`posetrank.diagnostics.order_diagnostics`,
+diagnostic framework in :mod:`gnn_poset_rank.diagnostics.order_diagnostics`,
 which reuses it to compute the Cycle Inconsistency Rate and to obtain the
 cleaned graph needed for the Structural Incomparability Rate.
 

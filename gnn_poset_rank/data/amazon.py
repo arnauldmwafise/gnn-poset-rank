@@ -1,5 +1,5 @@
 """
-posetrank.data.amazon
+gnn_poset_rank.data.amazon
 =======================
 
 Loader for the Amazon0302 co-purchase network (Leskovec, Adamic, and

@@ -1,5 +1,5 @@
 """
-Tests for posetrank.diagnostics.
+Tests for gnn_poset_rank.diagnostics.
 
 The SIR test against brute-force ground truth mirrors the exact
 verification performed before trusting this tool on any real dataset in
@@ -12,7 +12,7 @@ import networkx as nx
 import pytest
 import torch
 
-from posetrank.diagnostics import clean_dag, compute_order_diagnostics, greedy_feedback_arc_set, verify_directed
+from gnn_poset_rank.diagnostics import clean_dag, compute_order_diagnostics, greedy_feedback_arc_set, verify_directed
 
 
 def brute_force_sir(edges: torch.Tensor, num_nodes: int) -> float:

@@ -1,5 +1,5 @@
 """
-posetrank.training.train
+gnn_poset_rank.training.train
 ==========================
 
 Shared pair-sampling and train/eval routines used by every experiment in
@@ -107,8 +107,8 @@ def train_and_eval(
 ) -> Tuple[float, Dict[str, float]]:
     """Train a model and evaluate its three-way pairwise classification accuracy.
 
-    Both :class:`~posetrank.models.TotalOrderScoreModel` and
-    :class:`~posetrank.models.PartialOrderModel` are trained and
+    Both :class:`~gnn_poset_rank.models.TotalOrderScoreModel` and
+    :class:`~gnn_poset_rank.models.PartialOrderModel` are trained and
     evaluated through this exact same function, with the same
     hyperparameters, so that any difference in outcome between them is
     attributable to the prediction head alone.

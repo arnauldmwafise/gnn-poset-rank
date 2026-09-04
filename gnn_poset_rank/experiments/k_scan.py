@@ -1,5 +1,5 @@
 """
-posetrank.experiments.k_scan
+gnn_poset_rank.experiments.k_scan
 ==============================
 
 Reproduces Table 2: the synthetic K-scan predictive study (Section 5.3).
@@ -7,8 +7,8 @@ Reproduces Table 2: the synthetic K-scan predictive study (Section 5.3).
 Sweeps the number of quality dimensions ``K`` in the synthetic
 Pareto-dominance generator, which controls Structural Incomparability
 Rate directly, and measures the resulting advantage of
-:class:`~posetrank.models.PartialOrderModel` over
-:class:`~posetrank.models.TotalOrderScoreModel` at each SIR level, with
+:class:`~gnn_poset_rank.models.PartialOrderModel` over
+:class:`~gnn_poset_rank.models.TotalOrderScoreModel` at each SIR level, with
 multiple random seeds per level to characterize seed-to-seed variance
 rather than report single-run point estimates.
 """
@@ -16,10 +16,10 @@ rather than report single-run point estimates.
 import statistics
 from typing import Dict, Sequence
 
-from posetrank.data import generate_pareto_ranking_data
-from posetrank.diagnostics import compute_order_diagnostics
-from posetrank.models import PartialOrderModel, TotalOrderScoreModel
-from posetrank.training import sample_stratified_pairs, train_and_eval
+from gnn_poset_rank.data import generate_pareto_ranking_data
+from gnn_poset_rank.diagnostics import compute_order_diagnostics
+from gnn_poset_rank.models import PartialOrderModel, TotalOrderScoreModel
+from gnn_poset_rank.training import sample_stratified_pairs, train_and_eval
 
 
 def run_k_scan_point(
@@ -45,7 +45,7 @@ def run_k_scan_point(
         Random seeds; each drives data generation, pair sampling, and
         model initialization independently for that seed's run.
     num_items, feature_dim, feature_noise, observed_edge_fraction
-        Passed through to :func:`~posetrank.data.generate_pareto_ranking_data`.
+        Passed through to :func:`~gnn_poset_rank.data.generate_pareto_ranking_data`.
 
     Returns
     -------

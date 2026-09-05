@@ -92,7 +92,7 @@ source .venv/bin/activate  # on Windows: .venv\Scripts\activate
 ### Installing the Package
 
 ```bash
-git clone https://github.com/[username]/gnn-poset-rank.git
+git clone https://github.com/arnauldmwafise/gnn-poset-rank.git
 cd gnn-poset-rank
 pip install -e .
 pip install -r requirements.txt

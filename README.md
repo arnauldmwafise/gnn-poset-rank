@@ -1,5 +1,9 @@
 # gnn-poset-rank: Diagnostic and Predictive Tools for Poset-Aware Graph Neural Ranking
 
+[![Tests](https://github.com/[username]/gnn-poset-rank/actions/workflows/tests.yml/badge.svg)](https://github.com/[username]/gnn-poset-rank/actions/workflows/tests.yml)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](pyproject.toml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Official implementation and reproduction package for **"When Do Graph Neural
 Rankers Need Partial Orders? A Diagnostic and Predictive Framework for
 Poset-Aware Ranking."**

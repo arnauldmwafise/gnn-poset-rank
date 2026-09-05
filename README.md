@@ -262,9 +262,9 @@ If you use this code, please cite:
 ```bibtex
 @misc{gnnposetrank2026,
     title={When Do Graph Neural Rankers Need Partial Orders? A Diagnostic and Predictive Framework for Poset-Aware Ranking},
-    author={[Author Name]},
+    author={Arnauld Mesinga Mwafise},
     year={2026},
-    note={Code: https://github.com/[username]/gnn-poset-rank}
+    note={Code: https://github.com/arnauldmwafise/gnn-poset-rank}
 }
 ```
 
@@ -280,4 +280,4 @@ MIT -- see [LICENSE](LICENSE).
 ## Contact
 
 If you have any questions, issues, or feedback, please open a GitHub issue,
-or reach out to [Author Name] at `[email@institution.edu]`.
+or reach out to Arnauld M. Mwafise at `arnauldmesinga@gmail.com`.
